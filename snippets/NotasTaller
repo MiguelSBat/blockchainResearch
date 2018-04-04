@@ -1,0 +1,28 @@
+https://ethereum.gitbooks.io/frontier-guide/content/index.html
+
+1) Metamask (Conectarse a redes)
+
+2) Ganache (Abre la red privada)
+	npm install -g ganache-cli
+	ganache-cli --account="0x323341f2871da17ac53e7ab596d211fcc7bc0d61cd02e9e2319979f4884b8914,10000000000000000000"
+
+3) Truffle (Crea el workspace, compila y hace deploy de los smartContracts)
+		http://truffleframework.com/docs/getting_started/installation
+	truffle init
+	editar package.json
+	editar truffle.js
+	truffle compile
+	truffle migrate --network development
+	truffle console  <- Funciona igual que la de Geth
+
+4) web3.js (Librería JS que nos permite conectarnos a un nodo) 
+		http://web3js.readthedocs.io/en/1.0/getting-started.html
+		https://github.com/ethereum/web3.js
+	npm install web3
+	
+4) Vue (front-end)
+	npm install -g vue-cli
+	vue init webpack erc20-webui
+	npm run dev
+	
+
