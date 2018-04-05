@@ -1,6 +1,6 @@
 Hacer uso de un Oráculo implica necesariamente que se minee el bloque, añadiendo tiempo de espera a la llamada de la API. Además si el callback está en el contrato (y no directamente en el usuario) tendrán que minarse 2 bloques para que la llamada se complete.
 
-Oraclize tarda en la testnet 45 segundos en responder (3 bloques) y cobra un poco más de 0.004 eth para pagar la llamada al método __callback()
+Oraclize tarda en la testnet 45 segundos en responder (3 bloques) y cobra un poco más de 0.004 eth para pagar la llamada al método__callback()
 
 En la testnet se minea un bloque cada 15 segundos, esto implica que, tras la llamada a la API, el callback tarda entre 30 y 45 segundos.
 
