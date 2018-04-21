@@ -4,4 +4,4 @@ MAINTAINER Oraclize "info@oraclize.it"
 COPY index.js /tmp/
 WORKDIR /tmp/
 RUN npm install request
-CMD node index.js $ARG0
+CMD node index.js && exit 0

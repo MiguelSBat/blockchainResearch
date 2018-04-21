@@ -6,13 +6,11 @@ var before = Date.now();
 
 request.get(url, (error, response, body) => {
   let json = JSON.parse(body);
+  var after = Date.now();
+  var time = after - before;
+
   console.log(
-    `Status: ${json.status}`
+    `Status: ${json.status} | Time: ${time}`
   );
 });
 
-var after = Date.now();
-
-var time = after - before;
-
-console.log(time);
