@@ -8,7 +8,7 @@ request.get(url,{time:true}, (error, response, body) => {
   console.log(
     `Status: ${json.status} | Time: ${response.elapsedTime}`
   );
-  
+   process.exit(0);
   // With this line we can get more details about the request
  // console.log(request.timingPhases);
 });

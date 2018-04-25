@@ -1,0 +1,14 @@
+{
+  "name": "computationtest",
+  "version": "1.0.0",
+  "description": "A oraclize computation test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.85.0"
+  }
+}

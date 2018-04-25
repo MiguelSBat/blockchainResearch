@@ -1,0 +1,15 @@
+Ejecutar dockerfile
+ docker build ./
+ docker run <code>
+
+Subir a IPFS
+ ipfs init			(Crea los archivos de configuración ipfs)
+ ipfs daemon			(Inicia el daemon)
+ ipfs swarm peers		(Comprueba los peers a los que estás conectado)
+ ipfs add <path to file>	(Sube a ipfs el archivo y devuelve el hash)
+ ipfs add -w <path to file>	(Devuelve también el hash del directorio ipfs)
+ ipfs get <hash>		(Descarga el archivo)
+
+En navegador:
+ https://ipfs.io/ipfs/HASH		(Comprueba si el hash es recuperable)
+ http://app.oraclize.it/home/test_query	
