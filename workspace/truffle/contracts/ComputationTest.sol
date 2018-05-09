@@ -1,20 +1,21 @@
 
 /*
-   Oraclize computation test
+   Oraclize computationç
+   Currently working
 */
 
 
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.2;
 import "github.com/oraclize/ethereum-api/oraclizeAPI.sol";
 
 
-contract ComputationTest is usingOraclize {
+contract ComputationJson is usingOraclize {
     
     string public lastCallback;
     
     event newCallBackTest(string _result);
     
-    function ComputationTest() {
+    function ComputationJson() {
         oraclize_setProof(proofType_TLSNotary | proofStorage_IPFS); 
         callingDocker();
     }
@@ -27,7 +28,7 @@ contract ComputationTest is usingOraclize {
     
     function  callingDocker() payable {
 
-        oraclize_query("computation",["QmY151gwvzewRY7G7taWH1PpCbFPJxxUXM9ZVoMXb12rQr"]);
+        oraclize_query("computation",["json(Qmb7E5ZyaQzhUcqNVTQKJjWQzVGTm6zWQ7FPQuJYMBjCA6).[http-status,response-time]"]);
     }
     
     
