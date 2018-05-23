@@ -1,16 +1,16 @@
 <template>
 <div id="app">
   <h1>Token ERC20</h1>
-  <token></token>
+  <ethereumGateway></ethereumGateway>
 </div>
 </template>
 
 <script>
-import Token from './components/Token'
+import EthereumGateway from './components/EthereumGateway'
 export default {
   name: 'App',
   components: {
-    Token,
+    EthereumGateway,
   },
 };
 </script>

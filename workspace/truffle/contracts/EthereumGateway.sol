@@ -1,7 +1,7 @@
 
 /*
    Ethereum Gateway
-   Miguel Santos Batista
+   MiguelSBat
 */
 
 
@@ -24,14 +24,15 @@ contract EthereumGateway is usingOraclize {
     event newSLAViolation(string _message,uint _responseTime, uint _timeStamp);
 
     //Common example: "json(QmbZf6aVYqhGCQmGGydkNxC9m9gmgR3jBep9J7VGA8t1Xf).response-time", 200
-    //Second example: "json(QmdKCPM45NWpKfFrFCC2KcJWg2MFP79sRUSzvFSVoNLjLR).response-time", 200
+    //Second example: "json(QmaJc7XHX8Ckfg4qJMWCnMFRuLuXtwTzEjTVWCgMtMKQKW).response-time", 200
+    //Hardcode post example: "json(Qmc33WDvJk4QoAxfyu1q68BHBP84NhyUMSEZwNXXPa3krz).response-time"
     function EthereumGateway(string _IPFSline,uint _maxTimeResponse) {
         oraclize_setProof(proofType_TLSNotary | proofStorage_IPFS);
         maxTimeResponse = _maxTimeResponse;
         owner = msg.sender;
         IPFSline = _IPFSline;
 
-        request("GET","https://maps.googleapis.com/maps/api/geocode/json?address=Florence","none","");
+        request("GET","https://maps.googleapis.com/maps/api/geocode/json?address=Florence","none","none");
     }
 
     function setIPFSline(string _IPFSline){
@@ -58,14 +59,19 @@ contract EthereumGateway is usingOraclize {
         }
 
     }
+    /*
+    "GET","https://maps.googleapis.com/maps/api/geocode/json?address=Florence","none","none"
 
-    function  request(string _method,string _url,string _header,string _callbackURI) payable {
+    "POST", "https://api.themoviedb.org/3/movie/299536/rating?api_key=1b54b3280ac14d0f9cc81034c60f5863&guest_session_id=d9f42358983fe2439dcde04284c8df48","{\"Content-Type\":\"application/json;charset=utf-8\"}", "{\"body\": {\"value\":8.5},\"callBackURI\":\"none\"}"
+
+    */
+    function  request(string _method,string _url,string _header,string _params) payable {
         /*
         oraclize_query("computation",["json(Qmb7E5ZyaQzhUcqNVTQKJjWQzVGTm6zWQ7FPQuJYMBjCA6).[http-status,response-time]"]);
         This query return an array-like string, I dont know how to parse it.        EX: '[200, 429]'
         */
 
-        oraclize_query("computation",[IPFSline,_method,_url,_header,_callbackURI]);
+        oraclize_query("computation",[IPFSline,_method,_url,_header,_params]);
     }
 
 
