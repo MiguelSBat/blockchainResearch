@@ -1,0 +1,6 @@
+IPFS line with a json encoded return value:
+ json(QmaJc7XHX8Ckfg4qJMWCnMFRuLuXtwTzEjTVWCgMtMKQKW).response-time
+IPFS line with a POST call hardcoded in the dockerfile:
+ json(Qmc33WDvJk4QoAxfyu1q68BHBP84NhyUMSEZwNXXPa3krz).response-time
+IPFS line with a GET call hardcode in the docker file, it return a string with the time when the js start working:
+ QmZjgkx53aPEmdwiNpgAFgnXR2uCMkAp5nfUabZqiBuDUt

@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  <h1>Token ERC20</h1>
+  <h1>Ethereum Gateway</h1>
   <ethereumGateway></ethereumGateway>
 </div>
 </template>
