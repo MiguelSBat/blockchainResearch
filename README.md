@@ -38,8 +38,17 @@ IPFS Hash: 0x5aED47556404592e5A29A816538e0957De9caeea
 ```
 Contract Address (Rinkeby): 0x9E987d0126d7cB0B4a3A056c1a14255Bdc6DD1a5
 
-ComputationJson Multiple Return url (The code is unverified)
+Ethereum Gateway url (The code is unverified)
 https://rinkeby.etherscan.io/address/0x9e987d0126d7cb0b4a3a056c1a14255bdc6dd1a5
+
+IPFS Hash: Variable
+```
+**Ethereum Gateway (POST compatible)**
+```
+Contract Address (Rinkeby): 0x7762f7083ee494eE509bf2513D8753e94a6E6D8B
+
+Ethereum Gateway (POST Compatible) url (The code is unverified)
+https://rinkeby.etherscan.io/address/0x7762f7083ee494ee509bf2513d8753e94a6e6d8b
 
 IPFS Hash: Variable
 ```
